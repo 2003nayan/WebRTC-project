@@ -42,6 +42,7 @@ export class UserManager {
     }
 
     const room = this.roomManager.createRoom(user1, user2);
+    this.clearQueue();
   }
   initHandlers(socket: Socket) {
     socket.on("offer", ({ sdp, roomId }: { sdp: string; roomId: string }) => {
