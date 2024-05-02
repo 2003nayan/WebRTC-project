@@ -27,8 +27,8 @@ export const Room = () => {
       alert("send answer please");
       socket.emit("answer", {
         roomId,
-        sdp: ""
-      })
+        sdp: "",
+      });
     });
 
     socket.on("answer", ({ roomId, answer }) => {
@@ -39,4 +39,5 @@ export const Room = () => {
   }, [name]);
 
   return <div>Hi {name}</div>;
+  // this is the change I am forced to do
 };
