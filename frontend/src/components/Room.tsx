@@ -39,5 +39,4 @@ export const Room = () => {
   }, [name]);
 
   return <div>Hi {name}</div>;
-  // this is the change I am forced to do
 };
